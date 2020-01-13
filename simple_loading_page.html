@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 50px;
+            font-style: oblique;
+            text-transform: capitalize;
+            letter-spacing: 3px;
+            text-decoration:double;
+            text-shadow: 4px 3px 3px lightblue;
+            animation: animate 3s linear infinite ;
+        }
+        @keyframes animate {
+            0%{
+                font-size: small;
+                color: blue;
+            }
+            50%{
+                font-size: xx-large;
+                color: black;
+            }
+            100%{
+                font-size: small;
+                color: blue;
+            }
+
+        }
+        p:hover{
+            animation-play-state: paused;
+        }
+    </style>
+
+
+</head>
+<body>
+    <p>versa networks</p>
+</body>
+</html>
