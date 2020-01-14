@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms details</title>
+    <style>
+        body{
+            padding: 100px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            font-family: sans-serif;
+            font-size: 2em;
+            background: linear-gradient(pink,lightblue);
+        }
+      
+        input,select{
+            width: 500px;
+            height: 30px;
+        }
+       legend,fieldset{
+           line-height: 1.2em;
+           border: 3px solid black;
+           border-radius: 10px;
+           animation: animate 2s linear infinite;
+       }
+       @keyframes animate {
+           0%{
+               border: 3px solid black;
+           }
+           25%{
+               border: 3px solid aqua; 
+           }
+           50%{
+               border: 3px solid sandybrown;
+           }
+           75%{
+               border: 3px solid violet;
+           }
+           100%{
+            border: 3px solid black;
+           }
+       }
+       h1{
+           text-transform: uppercase;
+           color: cornflowerblue;
+       }
+      
+       .sub{
+           width: 300px;
+           height: 40px;
+           background-color: teal;
+           color: black;
+           border: none;
+           border-radius: 20px;
+
+       }
+       .sub:hover{
+           background-color: turquoise;
+           color: black;
+           cursor: pointer;
+       }
+       input{
+           background-color: white;
+       }
+    </style>
+
+</head>
+<body>
+    <h1>Versa Networks </h1><br>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="firstname">First Name: </label>
+          <input type="text" name="firstname" id="firstname" >
+          <br><br>
+          <label for="Lastname">Last Name: </label>
+          <input type="text" name="lastname" id="lastname" >
+          <br><br>
+          <label for="phno">Phone Number: </label>
+          <input type="text" name="phno" id="phno" placeholder="+91">
+          <br><br>
+          <label for="email">Email: </label><br>
+          <input type="email" name="email" id="email">
+          <br><br>
+          <label for="sex" >Sex: </label><br>
+          <select id="sex" >
+            <option value="male">Male</option>
+            <option value="male">Female</option>
+            <option value="male">Others</option>
+        </select>
+        <br><br>
+           <label for="sumbit"></label> 
+          <input type="submit"  value="Submit"  class="sub" onclick="myfunction()">
+        </fieldset>
+      
+      <script>
+          function myfunction() {
+                alert("clicked the button");
+                var data = {
+                    firstname : " ",
+                    lastname : " ",
+                    phno : " ",
+                    email : " ",
+                    sex : " "
+                };
+
+                var fname = document.getElementById("firstname").value ;
+                data.firstname = fname;
+                var lname = document.getElementById("lastname").value ;
+                data.lastname = lname;
+                var phno = document.getElementById("phno").value ;
+                data.phno = phno;
+                var email = document.getElementById("email").value ;
+                data.email = email;
+                var sex = document.getElementById("sex").value ;
+                data.sex = sex;
+                console.log(data);
+                alert(typeof(data));
+
+            }
+      </script>
+</body>
+</html>
