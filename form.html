@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welcome...</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background: black;
+            line-height: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        #container{
+            padding: 30px;
+            margin: 30px;
+            background: blueviolet;
+            max-width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            animation: animate 2s linear infinite;
+        }
+        @keyframes animate {
+            0%{
+                border: 2px solid white;
+            }
+            25%{
+                border: 2px solid red;
+            }
+            50%{
+                border: 2px solid blue;
+            }
+            75%{
+                border: 2px solid coral;
+            }
+            100%{
+                border: 2px solid white;
+            }
+        }
+        label{
+            color: black;
+            padding-bottom: 20px;
+        }
+        h3{
+            text-align: center;
+        }
+        label{
+            padding-top: 10px;
+            font-size: 1.5rem;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        button{
+            
+            margin:50px;
+            
+            width: 150px;
+            height: 150px;
+            color: white;
+            background: darkcyan;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+
+        }
+        button:hover{
+            color: black;
+            background: blue;
+        }
+
+        span{
+            color: red
+            ;
+        }
+        input{
+            background: lightgrey;
+            border: none;
+        }
+        p{
+            color: white;
+        }
+     
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <h3> <span> L</span>ogin Form</h3>
+        <label for="name" id name>Name </label>
+        <input type="text" name="name" id="name"><br>
+        <label for="email" id="email">Email</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="password">Password</label>
+        <input type="password" name="passsword" id="password"><br>
+        <label for="re-passwd" id="re-passwd">Re-password</label>
+        <input type="password" name="re-passwd" id="re-passwd">
+        <button>Login</button>
+        <p>Dont have an account? <a href="http://www.google.com">sign up</a> </p>
+    </div>
+</body>
+</html>
